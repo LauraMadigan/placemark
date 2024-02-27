@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "9ad65ec5-47a0-48b8-a5e9-6f7d8d59d7b2"
+    },
+    {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "_id": "72ac6d9b-0a61-4a7f-a813-38b12cbdd30f"
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "_id": "ffb3de70-af51-4325-92d9-e489353581a4"
+    }
+  ],
+  "playlists": [
+    {
+      "title": "Beethoven Sonatas",
+      "_id": "5138d5b9-0423-4426-9166-1e6e9dd306e4"
+    },
+    {
+      "title": "Beethoven Concertos",
+      "_id": "fe9bfcae-d0be-4175-8c96-232b123b29eb"
+    },
+    {
+      "title": "Beethoven Symphonies",
+      "_id": "43124334-1415-487b-9503-b953f1e884c3"
+    }
+  ],
+  "tracks": [
+    {
+      "title": "Isla",
+      "artist": "Jason",
+      "duration": 1,
+      "_id": "441a5ad5-1468-4ce7-9ad3-e00e8173b45a",
+      "playlistid": "32e1abba-d930-45bd-b242-e789d849f953"
+    }
+  ]
+}
