@@ -2,14 +2,14 @@ import Mongoose from "mongoose";
 
 const { Schema } = Mongoose;
 
-const trackSchema = new Schema({
+const placemarkSchema = new Schema({
   title: String,
   artist: String,
   duration: Number,
-  playlistid: {
+  collectionid: {
     type: Schema.Types.ObjectId,
-    ref: "Playlist",
+    ref: "Collection",
   },
 });
 
-export const Track = Mongoose.model("Track", trackSchema);
+export const Placemark = Mongoose.model("Placemark", placemarkSchema);

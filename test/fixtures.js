@@ -40,7 +40,7 @@ export const beethoven = {
   title: "Mozart Favourites"
 };
 
-export const testPlaylists = [
+export const testCollections = [
   {
     title: "Beethoven Sonatas"
   },
@@ -52,7 +52,7 @@ export const testPlaylists = [
   }
 ];
 
-export const testTracks = [
+export const testPlacemarks = [
   {
     "title": "Piano Sonata No. 3",
     "artist": "Beethoven",

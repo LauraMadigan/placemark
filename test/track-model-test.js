@@ -1,66 +1,66 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
-import { testPlaylists, testTracks, beethoven, mozart, concerto, testUsers } from "./fixtures.js";
+import { testCollections, testPlacemarks, beethoven, mozart, concerto, testUsers } from "./fixtures.js";
 import { assertSubset } from "./test-utils.js";
 
-suite("Track Model tests", () => {
+suite("Placemark Model tests", () => {
 
   let beethovenList = null;
 
   setup(async () => {
     db.init("mongo");
-    await db.playlistStore.deleteAllPlaylists();
-    await db.trackStore.deleteAllTracks();
-    beethovenList = await db.playlistStore.addPlaylist(beethoven);
-    for (let i = 0; i < testTracks.length; i += 1) {
+    await db.collectionStore.deleteAllCollections();
+    await db.placemarkStore.deleteAllPlacemarks();
+    beethovenList = await db.collectionStore.addCollection(beethoven);
+    for (let i = 0; i < testPlacemarks.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
-      testTracks[i] = await db.trackStore.addTrack(beethovenList._id, testTracks[i]);
+      testPlacemarks[i] = await db.placemarkStore.addPlacemark(beethovenList._id, testPlacemarks[i]);
     }
   });
 
-  test("create single track", async () => {
-    const mozartList = await db.playlistStore.addPlaylist(mozart);
-    const track = await db.trackStore.addTrack(mozartList._id, concerto)
-    assert.isNotNull(track._id);
-    assertSubset (concerto, track);
+  test("create single placemark", async () => {
+    const mozartList = await db.collectionStore.addCollection(mozart);
+    const placemark = await db.placemarkStore.addPlacemark(mozartList._id, concerto)
+    assert.isNotNull(placemark._id);
+    assertSubset (concerto, placemark);
   });
 
-  test("get multiple tracks", async () => {
-    const tracks = await db.trackStore.getTracksByPlaylistId(beethovenList._id);
-    assert.equal(tracks.length, testTracks.length)
+  test("get multiple placemarks", async () => {
+    const placemarks = await db.placemarkStore.getPlacemarksByCollectionId(beethovenList._id);
+    assert.equal(placemarks.length, testPlacemarks.length)
   });
 
-  test("delete all tracks", async () => {
-    const tracks = await db.trackStore.getAllTracks();
-    assert.equal(testTracks.length, tracks.length);
-    await db.trackStore.deleteAllTracks();
-    const newTracks = await db.trackStore.getAllTracks();
-    assert.equal(0, newTracks.length);
+  test("delete all placemarks", async () => {
+    const placemarks = await db.placemarkStore.getAllPlacemarks();
+    assert.equal(testPlacemarks.length, placemarks.length);
+    await db.placemarkStore.deleteAllPlacemarks();
+    const newPlacemarks = await db.placemarkStore.getAllPlacemarks();
+    assert.equal(0, newPlacemarks.length);
   });
 
-  test("get a track - success", async () => {
-    const mozartList = await db.playlistStore.addPlaylist(mozart);
-    const track = await db.trackStore.addTrack(mozartList._id, concerto)
-    const newTrack = await db.trackStore.getTrackById(track._id);
-    assertSubset (concerto, newTrack);
+  test("get a placemark - success", async () => {
+    const mozartList = await db.collectionStore.addCollection(mozart);
+    const placemark = await db.placemarkStore.addPlacemark(mozartList._id, concerto)
+    const newPlacemark = await db.placemarkStore.getPlacemarkById(placemark._id);
+    assertSubset (concerto, newPlacemark);
   });
 
-  test("delete One Track - success", async () => {
-    await db.trackStore.deleteTrack(testTracks[0]._id);
-    const tracks = await db.trackStore.getAllTracks();
-    assert.equal(tracks.length, testPlaylists.length - 1);
-    const deletedTrack = await db.trackStore.getTrackById(testTracks[0]._id);
-    assert.isNull(deletedTrack);
+  test("delete One Placemark - success", async () => {
+    await db.placemarkStore.deletePlacemark(testPlacemarks[0]._id);
+    const placemarks = await db.placemarkStore.getAllPlacemarks();
+    assert.equal(placemarks.length, testCollections.length - 1);
+    const deletedPlacemark = await db.placemarkStore.getPlacemarkById(testPlacemarks[0]._id);
+    assert.isNull(deletedPlacemark);
   });
 
-  test("get a track - bad params", async () => {
-    assert.isNull(await db.trackStore.getTrackById(""));
-    assert.isNull(await db.trackStore.getTrackById());
+  test("get a placemark - bad params", async () => {
+    assert.isNull(await db.placemarkStore.getPlacemarkById(""));
+    assert.isNull(await db.placemarkStore.getPlacemarkById());
   });
 
-  test("delete one track - fail", async () => {
-    await db.trackStore.deleteTrack("bad-id");
-    const tracks = await db.trackStore.getAllTracks();
-    assert.equal(tracks.length, testPlaylists.length);
+  test("delete one placemark - fail", async () => {
+    await db.placemarkStore.deletePlacemark("bad-id");
+    const placemarks = await db.placemarkStore.getAllPlacemarks();
+    assert.equal(placemarks.length, testCollections.length);
   });
 });

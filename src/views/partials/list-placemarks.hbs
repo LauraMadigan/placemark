@@ -1,14 +1,14 @@
 <table class="table is-fullwidth">
   <thead>
     <tr>
-      <th>Track</th>
+      <th>Placemark</th>
       <th>Artist</th>
       <th>Duration</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each playlist.tracks}}
+    {{#each collection.placemarks}}
       <tr>
         <td>
           {{title}}
@@ -20,7 +20,7 @@
           {{duration}}
         </td>
         <td>
-          <a href="/playlist/{{../playlist._id}}/removeTrack/{{_id}}" class="button">
+          <a href="/collection/{{../collection._id}}/removePlacemark/{{_id}}" class="button">
             <span class="icon is-small">
               <i class="fas fa-trash"></i>
             </span>

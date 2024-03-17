@@ -27,6 +27,7 @@ async function init() {
   });
   await server.register(Vision);
   await server.register(Cookie);
+  
   server.validator(Joi);
   server.auth.strategy("session", "cookie", {
     cookie: {
