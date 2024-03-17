@@ -20,6 +20,13 @@
       "email": "bart@simpson.com",
       "password": "secret",
       "_id": "ffb3de70-af51-4325-92d9-e489353581a4"
+    },
+    {
+      "firstName": "Laura",
+      "lastName": "Madigan",
+      "email": "laura@madigan.org",
+      "password": "password",
+      "_id": "efd124d8-224f-46b7-aea1-35c7a6b73e8b"
     }
   ],
   "playlists": [
