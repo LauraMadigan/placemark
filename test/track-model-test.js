@@ -8,7 +8,7 @@ suite("Placemark Model tests", () => {
   let beethovenList = null;
 
   setup(async () => {
-    db.init("mongo");
+    db.init("json");
     await db.collectionStore.deleteAllCollections();
     await db.placemarkStore.deleteAllPlacemarks();
     beethovenList = await db.collectionStore.addCollection(beethoven);

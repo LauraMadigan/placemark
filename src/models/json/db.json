@@ -5,63 +5,50 @@
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "_id": "9ad65ec5-47a0-48b8-a5e9-6f7d8d59d7b2"
+      "_id": "23ffcc76-54fb-47d2-9055-cd046c198dea"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "_id": "72ac6d9b-0a61-4a7f-a813-38b12cbdd30f"
+      "_id": "f08cd04d-4765-4d04-89cb-755a4908863e"
     },
     {
       "firstName": "Bart",
       "lastName": "Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
-      "_id": "ffb3de70-af51-4325-92d9-e489353581a4"
-    },
-    {
-      "firstName": "Laura",
-      "lastName": "Madigan",
-      "email": "laura@madigan.org",
-      "password": "password",
-      "_id": "efd124d8-224f-46b7-aea1-35c7a6b73e8b"
-    },
-    {
-      "firstName": "Laura",
-      "lastName": "Madigan",
-      "email": "laura@madigan.org",
-      "password": "password",
-      "_id": "0647d307-52c6-4a3e-bff0-ecdc08efc22b"
+      "_id": "f77b4c6e-bcab-43ca-8d49-71e6dfcc71d7"
     }
   ],
   "collections": [
     {
-      "title": "Beethoven Sonatas",
-      "_id": "5138d5b9-0423-4426-9166-1e6e9dd306e4"
-    },
-    {
-      "title": "Beethoven Concertos",
-      "_id": "fe9bfcae-d0be-4175-8c96-232b123b29eb"
-    },
-    {
-      "title": "Beethoven Symphonies",
-      "_id": "43124334-1415-487b-9503-b953f1e884c3"
-    },
-    {
-      "userid": "efd124d8-224f-46b7-aea1-35c7a6b73e8b",
-      "title": "Monuments",
-      "_id": "e632f1a5-04ae-4a60-b5ad-faa70b01b536"
+      "name": "Mozart Favourites",
+      "_id": "aef95c0d-dc1f-48df-848c-b393736bde2e"
     }
   ],
   "placemarks": [
     {
-      "title": "Isla",
-      "artist": "Jason",
-      "duration": 1,
-      "_id": "441a5ad5-1468-4ce7-9ad3-e00e8173b45a",
-      "collectionid": "32e1abba-d930-45bd-b242-e789d849f953"
+      "title": "Piano Sonata No. 3",
+      "artist": "Beethoven",
+      "duration": 5,
+      "_id": "2a4bddec-1655-455c-a60d-bcb8021ea3b6",
+      "collectionid": "aef95c0d-dc1f-48df-848c-b393736bde2e"
+    },
+    {
+      "title": "Piano Sonata No. 7",
+      "artist": "Beethoven",
+      "duration": 6,
+      "_id": "5962f90b-6726-4f83-9a94-4b29dde341c8",
+      "collectionid": "aef95c0d-dc1f-48df-848c-b393736bde2e"
+    },
+    {
+      "title": "Piano Sonata No. 10",
+      "artist": "Beethoven",
+      "duration": 4,
+      "_id": "d11f08f8-7c6c-49a4-9c20-82abd91ec61a",
+      "collectionid": "aef95c0d-dc1f-48df-848c-b393736bde2e"
     }
   ]
 }

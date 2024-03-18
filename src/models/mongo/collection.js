@@ -3,7 +3,7 @@ import Mongoose from "mongoose";
 const { Schema } = Mongoose;
 
 const collectionSchema = new Schema({
-  title: String,
+  name: String,
   userid: {
     type: Schema.Types.ObjectId,
     ref: "User",

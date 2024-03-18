@@ -8,7 +8,7 @@ EventEmitter.setMaxListeners(25);
 suite("Collection Model tests", () => {
 
   setup(async () => {
-    db.init("mongo");
+    db.init("json");
     await db.collectionStore.deleteAllCollections();
     for (let i = 0; i < testCollections.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop

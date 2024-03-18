@@ -13,11 +13,11 @@ export const UserCredentialsSpec = {
 }
 
 export const PlacemarkSpec = {
-title: Joi.string().required(),
-artist: Joi.string().required(),
-duration: Joi.number().required(),
+  title: Joi.string().required(),
+  artist: Joi.string().required(),
+  duration: Joi.number().required(),
 }
 
 export const CollectionSpec = {
-  title: Joi.string().required(),
+  name: Joi.string().required(),
 }

@@ -27,7 +27,7 @@ export const testUsers = [
 ];
 
 export const mozart = {
-  title: "Mozart Favourites"
+  name: "Mozart Favourites"
 };
 
 export const concerto = {
@@ -37,18 +37,18 @@ export const concerto = {
 };
 
 export const beethoven = {
-  title: "Mozart Favourites"
+  name: "Mozart Favourites"
 };
 
 export const testCollections = [
   {
-    title: "Beethoven Sonatas"
+    name: "Beethoven Sonatas"
   },
   {
-    title: "Beethoven Concertos"
+    name: "Beethoven Concertos"
   },
   {
-    title: "Beethoven Symphonies"
+    name: "Beethoven Symphonies"
   }
 ];
 
