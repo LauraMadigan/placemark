@@ -44,8 +44,12 @@ export const placemarkMemStore = {
   },
 
   async updatePlacemark(placemark, updatedPlacemark) {
-    placemark.title = updatedPlacemark.title;
-    placemark.artist = updatedPlacemark.artist;
-    placemark.duration = updatedPlacemark.duration;
+    placemark.name = updatedPlacemark.name;
+    placemark.county = updatedPlacemark.county;
+    placemark.locality = updatedPlacemark.locality;
+    placemark.latitude = updatedPlacemark.latitude;
+    placemark.longitude = updatedPlacemark.longitude;
+    placemark.description = updatedPlacemark.description;
+    placemark.monument_class = updatedPlacemark.monument_class;
   },
 };

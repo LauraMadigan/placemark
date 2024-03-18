@@ -3,9 +3,13 @@ import Mongoose from "mongoose";
 const { Schema } = Mongoose;
 
 const placemarkSchema = new Schema({
-  title: String,
-  artist: String,
-  duration: Number,
+  name: String,
+  county: String,
+  locality: String,
+  latitude: Number,
+  longitude: Number,
+  description: String,
+  monument_class: String,
   collectionid: {
     type: Schema.Types.ObjectId,
     ref: "Collection",

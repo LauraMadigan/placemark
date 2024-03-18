@@ -13,9 +13,13 @@ export const UserCredentialsSpec = {
 }
 
 export const PlacemarkSpec = {
-  title: Joi.string().required(),
-  artist: Joi.string().required(),
-  duration: Joi.number().required(),
+  name: Joi.string().required(),
+  county: Joi.string().required(),
+  locality: Joi.string().required(),
+  latitude: Joi.number().required(),
+  longitude: Joi.number().required(),
+  description: Joi.string().required(),
+  monument_class: Joi.string().required(),
 }
 
 export const CollectionSpec = {

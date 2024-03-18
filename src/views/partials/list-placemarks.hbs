@@ -2,8 +2,12 @@
   <thead>
     <tr>
       <th>Placemark</th>
-      <th>Artist</th>
-      <th>Duration</th>
+      <th>County</th>
+      <th>Locality</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+      <th>Monument Class</th>
       <th></th>
     </tr>
   </thead>
@@ -11,13 +15,25 @@
     {{#each collection.placemarks}}
       <tr>
         <td>
-          {{title}}
+          {{name}}
         </td>
         <td>
-          {{artist}}
+          {{county}}
         </td>
         <td>
-          {{duration}}
+          {{locality}}
+        </td>
+        <td>
+          {{latitude}}
+        </td>
+        <td>
+          {{longitude}}
+        </td>
+        <td>
+          <textarea name="description" id="description">{{description}}</textarea>
+        </td>
+        <td>
+          {{monument_class}}
         </td>
         <td>
           <a href="/collection/{{../collection._id}}/removePlacemark/{{_id}}" class="button">

@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
-import { testCollections, mozart } from "./fixtures.js";
+import { testCollections, monuments } from "./fixtures.js";
 import { assertSubset } from "./test-utils.js";
 import { EventEmitter } from "events";
 EventEmitter.setMaxListeners(25);
@@ -17,8 +17,8 @@ suite("Collection Model tests", () => {
   });
 
   test("create a collection", async () => {
-    const collection = await db.collectionStore.addCollection(mozart);
-    assertSubset(mozart, collection);
+    const collection = await db.collectionStore.addCollection(monuments);
+    assertSubset(monuments, collection);
     assert.isDefined(collection._id);
   });
 
@@ -31,9 +31,9 @@ suite("Collection Model tests", () => {
   });
 
   test("get a collection - success", async () => {
-    const collection = await db.collectionStore.addCollection(mozart);
+    const collection = await db.collectionStore.addCollection(monuments);
     const returnedCollection = await db.collectionStore.getCollectionById(collection._id);
-    assertSubset(mozart, collection);
+    assertSubset(monuments, collection);
   });
 
   test("delete One Playist - success", async () => {

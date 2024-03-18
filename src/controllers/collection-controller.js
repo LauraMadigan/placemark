@@ -24,9 +24,13 @@ export const collectionController = {
     handler: async function (request, h) {
       const collection = await db.collectionStore.getCollectionById(request.params.id);
       const newPlacemark = {
-        title: request.payload.title,
-        artist: request.payload.artist,
-        duration: Number(request.payload.duration),
+        name: request.payload.name,
+        county: request.payload.county,
+        locality: request.payload.locality,
+        latitude: request.payload.latitude,
+        longitude: request.payload.longitude,
+        description: request.payload.description,
+        monument_class: request.payload.monument_class
       };
       await db.placemarkStore.addPlacemark(collection._id, newPlacemark);
       return h.redirect(`/collection/${collection._id}`);
