@@ -5,6 +5,11 @@ export const accountsController = {
   index: {
     auth: false,
     handler: function (request, h) {
+      return h.view("index", { title: "Welcome to Placemark" });
+    },
+  },
+  about: {
+    handler: function (request, h) {
       return h.view("about-view", { title: "Welcome to Placemark" });
     },
   },

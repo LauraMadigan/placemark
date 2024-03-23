@@ -5,6 +5,7 @@ import { userProfileController } from "./controllers/user-profile-controller.js"
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
+  { method: "GET", path: "/about", config: accountsController.about },
   { method: "GET", path: "/signup", config: accountsController.showSignup },
   { method: "GET", path: "/login", config: accountsController.showLogin },
   { method: "GET", path: "/logout", config: accountsController.logout },
@@ -13,7 +14,6 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
   { method: "POST", path: "/dashboard/addcollection", config: dashboardController.addCollection },
-  { method: "GET", path: "/about", config: accountsController.index },
   { method: "GET", path: "/collection/{id}", config: collectionController.index },
   { method: "POST", path: "/collection/{id}/addplacemark", config: collectionController.addPlacemark },
   { method: "GET", path: "/collection/{collectionId}/removePlacemark/{placemarkId}", config: collectionController.removePlacemark },
