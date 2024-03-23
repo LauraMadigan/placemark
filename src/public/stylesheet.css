@@ -1,1 +1,51 @@
 #map { height: 580px; }
+
+.navbar { background-color: #496233; }
+
+.navbar .title { color: #fff; }
+
+.navbar .brand { 
+  color: #e4ff90; 
+  font-size: 48px; 
+}
+
+
+.dosis-400 {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fredericka-the great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo-text {
+  font-family: 'Fredericka the Great';
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Dosis';
+}
+
+.button.is-primary, .button.is-link {
+  background-color: #e4ff91;
+  color: black;
+  border: 1px solid #e3e7d9;
+}
+
+.button.is-primary:hover, .button:hover, .button.is-link:hover {
+  background-color: #f5fed9;
+  color: black;
+  border: 1px solid #e3e7d9;
+}
+
+.button.is-primary:hover {
+  background-color: #e4ff91;
+  color: black;
+}
+
+

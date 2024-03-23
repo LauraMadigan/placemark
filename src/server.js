@@ -55,12 +55,15 @@ async function init() {
   server.route({
     method: 'GET',
     path: '/public/{param*}',
+    options: {
+      auth: false
+    },
     handler: {
-        directory: {
-            path: path.join(__dirname, 'public')
-        }
+      directory: {
+        path: path.join(__dirname, 'public')
+      }
     }
-});
+  });
   db.init("json");
   server.route(webRoutes);
   await server.start();
