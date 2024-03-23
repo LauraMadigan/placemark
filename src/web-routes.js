@@ -1,6 +1,5 @@
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
-import { aboutController } from "./controllers/about-controller.js";
 import { collectionController } from "./controllers/collection-controller.js";
 import { userProfileController } from "./controllers/user-profile-controller.js";
 
@@ -14,7 +13,7 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
   { method: "POST", path: "/dashboard/addcollection", config: dashboardController.addCollection },
-  { method: "GET", path: "/about", config: aboutController.index },
+  { method: "GET", path: "/about", config: accountsController.index },
   { method: "GET", path: "/collection/{id}", config: collectionController.index },
   { method: "POST", path: "/collection/{id}/addplacemark", config: collectionController.addPlacemark },
   { method: "GET", path: "/collection/{collectionId}/removePlacemark/{placemarkId}", config: collectionController.removePlacemark },
