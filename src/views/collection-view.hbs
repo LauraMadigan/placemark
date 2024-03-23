@@ -1,12 +1,4 @@
-{{> menu}}
-
-<section class="section">
-  <h1 class="title">
-    {{collection.name}}
-  </h1>
-  {{> list-placemarks collection=collection }}
-  {{> add-placemark}}
-</section>
+{{> menu active="dashboard" }}
 
 <section class="section" id="map-section">
   <div class="card">
@@ -17,4 +9,12 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <h1 class="title">
+    {{collection.name}}
+  </h1>
+  {{> list-placemarks collection=collection }}
+  {{> add-placemark}}
 </section>
