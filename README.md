@@ -10,7 +10,13 @@ An app to list and managed points-of-interest.
 
 `npm start`
 
-Login with `homer@simpson.com` and `secret`.
+# Users
+
+The app is configured with three users:
+
+- User: `homer@simpson.com`, password: `secret`
+- User: `marge@simpson.com`, password: `secret`
+- User: `bart@simpson.com`, password: `secret`
 
 # Run the tests
 
