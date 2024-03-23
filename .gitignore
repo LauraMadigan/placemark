@@ -22,4 +22,4 @@ pids
 *.seed
 
 # Don't include secrets file
-.env
+#.env
