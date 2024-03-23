@@ -8,7 +8,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 {{#each collection.placemarks}}
   L.marker([{{this.latitude}}, {{this.longitude}}]).addTo(map)
-    .bindPopup('{{this.name}}')
+    .bindPopup('<b>Name: </b><span>{{this.name}}</span><br/><b>County: </b><span>{{this.county}}</span><br/><b>Monument Class: </b><span>{{this.monument_class}}</span><br/>')
     .openPopup();
 {{/each}}
 
