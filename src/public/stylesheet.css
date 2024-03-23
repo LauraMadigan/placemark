@@ -1,12 +1,18 @@
-#map { height: 580px; }
+#map {
+  height: 580px;
+}
 
-.navbar { background-color: #496233; }
+.navbar {
+  background-color: #496233;
+}
 
-.navbar .title { color: #fff; }
+.navbar .title {
+  color: #fff;
+}
 
-.navbar .brand { 
-  color: #e4ff90; 
-  font-size: 48px; 
+.navbar .brand {
+  color: #e4ff90;
+  font-size: 48px;
 }
 
 
@@ -27,17 +33,24 @@
   font-family: 'Fredericka the Great';
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Dosis';
 }
 
-.button.is-primary, .button.is-link {
+.button.is-primary,
+.button.is-link {
   background-color: #e4ff91;
   color: black;
   border: 1px solid #e3e7d9;
 }
 
-.button.is-primary:hover, .button:hover, .button.is-link:hover {
+.button.is-primary:hover,
+.button:hover,
+.button.is-link:hover {
   background-color: #f5fed9;
   color: black;
   border: 1px solid #e3e7d9;
@@ -46,4 +59,24 @@ h1, h2, h3, h4, h5 {
 .button.is-primary:hover {
   background-color: #e4ff91;
   color: black;
+}
+
+.about-box {
+  background-image: url(/public/images/tara.jpg);
+  background-size: cover;
+  height: 38rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: light;
+}
+
+.about-box h1 {
+  margin-top: 8rem;
+  font-size: 4rem;
+  color: #3b5426;
+  font-family: 'Fredericka the Great';
+}
+
+.about-box a {
+  color: white;
 }
