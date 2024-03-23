@@ -10,6 +10,8 @@ An app to list and managed points-of-interest.
 
 `npm start`
 
+Login with `homer@simpson.com` and `secret`.
+
 # Run the tests
 
 `npm test`

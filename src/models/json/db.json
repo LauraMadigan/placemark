@@ -20,13 +20,6 @@
       "email": "bart@simpson.com",
       "password": "secret",
       "_id": "19df31d6-8b91-4754-8a31-6d7b90a4d00e"
-    },
-    {
-      "firstName": "Laura",
-      "lastName": "Madigan",
-      "email": "laura@madigan.org",
-      "password": "password",
-      "_id": "0f998b26-7a23-4218-8080-1c3e3703744d"
     }
   ],
   "collections": [
@@ -35,7 +28,7 @@
       "_id": "91a2cf6c-184a-4a51-b5b2-44072f2bfe9f"
     },
     {
-      "userid": "0f998b26-7a23-4218-8080-1c3e3703744d",
+      "userid": "8769e4ef-54f1-437f-ad79-8b85c5bec322",
       "name": "National Monuments",
       "_id": "e8afb922-02bf-4c69-bf63-a05463f86f9d"
     }
